@@ -111,10 +111,10 @@
 
         en {
             bindings = <
-&none  &kp B           &kp L           &kp D        &kp C         &kp V                        &kp J  &kp Y             &kp O        &kp U           &kp COMMA       &none
-&none  &mt LEFT_GUI N  &mt LEFT_ALT R  &mt LCTRL T  &mt LSHIFT S  &kp G                        &kp P  &mt LEFT_SHIFT H  &mt LCTRL A  &mt LEFT_ALT E  &mt LEFT_GUI I  &none
-&none  &kp X           &kp Q           &kp M        &kp W         &kp Z                        &kp K  &kp F             &kp SQT      &kp SEMI        &kp DOT         &none
-                       &none           &none        &kp LCTRL     &mo 3  &kp SPACE    &kp RET  &mo 9  &none             &none        &none
+&bootloader  &kp B           &kp L           &kp D        &kp C         &kp V                        &kp J  &kp Y             &kp O        &kp U           &kp COMMA       &none
+&none        &mt LEFT_GUI N  &mt LEFT_ALT R  &mt LCTRL T  &mt LSHIFT S  &kp G                        &kp P  &mt LEFT_SHIFT H  &mt LCTRL A  &mt LEFT_ALT E  &mt LEFT_GUI I  &none
+&none        &kp X           &kp Q           &kp M        &kp W         &kp Z                        &kp K  &kp F             &kp SQT      &kp SEMI        &kp DOT         &none
+                             &none           &none        &kp LCTRL     &mo 3  &kp SPACE    &kp RET  &mo 9  &none             &none        &none
             >;
 
             display-name = "Base";
