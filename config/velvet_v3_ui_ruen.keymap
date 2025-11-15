@@ -202,10 +202,10 @@
 
         mouse {
             bindings = <
-&none  &td_reset  &none     &none      &none      &none                  &none  &none     &none     &none     &none  &none
-&none  &kp LGUI   &kp LALT  &kp LCTRL  &kp LSHFT  &none                  &mo 6  &mkp MB1  &mkp MB2  &mkp MB3  &mo 5  &none
-&none  &none      &none     &none      &none      &none                  &none  &none     &none     &none     &none  &none
-                  &none     &none      &none      &none  &none    &none  &none  &none     &none     &none
+&none  &td_reset  &none     &none      &none      &none                        &none  &none  &none     &none     &none  &none
+&none  &kp LGUI   &kp LALT  &kp LCTRL  &kp LSHFT  &none                        &none  &mo 6  &mkp MB4  &mkp MB5  &mo 5  &none
+&none  &none      &none     &none      &none      &none                        &none  &none  &none     &none     &none  &none
+                  &none     &none      &mkp MB3   &mkp MB1  &mkp MB2    &none  &none  &none  &none     &none
             >;
 
             display-name = "Mouse";
