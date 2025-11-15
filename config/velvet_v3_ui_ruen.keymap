@@ -29,6 +29,13 @@
             release-after-ms = <200>;
         };
 
+        &mt {
+            quick-tap-ms = <100>;
+            global-quick-tap;
+            flavor = "tap-preferred";
+            tapping-term-ms = <170>;
+        };
+
         td_reset: td_reset {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_RESET";
@@ -286,7 +293,7 @@
 &trackball { cpi = <1000>; };
 
 &trackball_listener {
-    input-processors = <&zip_auto_mouse 6 500>, <&zip_xy_scaler 9 20>;
+    input-processors = <&zip_auto_mouse 4 500>, <&zip_xy_scaler 9 20>;
 
     scroller {
         layers = <5>;
