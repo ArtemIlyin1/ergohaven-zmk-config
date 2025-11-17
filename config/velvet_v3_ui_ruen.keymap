@@ -170,7 +170,7 @@
             bindings = <
 &none  &kp B           &kp L           &kp D          &kp C         &kp V                                    &kp J            &kp Y             &kp O          &kp U           &kp COMMA       &none
 &none  &mt LEFT_GUI N  &mt LEFT_ALT R  &mt LCTRL T    &mt LSHIFT S  &kp G                                    &kp P            &mt LEFT_SHIFT H  &mt LCTRL A    &mt LEFT_ALT E  &mt LEFT_GUI I  &none
-&none  &lt 2 X         &kp Q           &kp M          &kp W         &kp Z                                    &kp K            &kp F             &kp SQT        &kp SEMI        &lt 2 DOT       &none
+&none  &lt 2 X         &kp Q           &kp M          &kp W         &kp Z                                    &kp K            &kp F             &kp SQT        &kp FSLH        &lt 2 DOT       &none
                        &none           &td_lang_sync  &lt 7 ESC     &ht_space 3 0  &lt 4 TAB    &lt 9 ENTER  &lt 8 BACKSPACE  &none             &lt 11 DELETE  &none
             >;
 
