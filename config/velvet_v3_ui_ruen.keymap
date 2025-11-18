@@ -161,6 +161,41 @@
             bindings = <&kp LG(SPACE) &tog 1>;
             label = "LG_TOG";
         };
+
+        m_copy: m_copy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(C)>;
+            label = "M_COPY";
+        };
+
+        m_paste: m_paste {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(V)>;
+            label = "M_PASTE";
+        };
+
+        m_cut: m_cut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(X)>;
+            label = "M_CUT";
+        };
+
+        m_undo: m_undo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(Z)>;
+            label = "M_UNDO";
+        };
+
+        m_redo: m_redo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LS(Z))>;
+            label = "M_REDO";
+        };
     };
 
     keymap {
@@ -168,9 +203,9 @@
 
         en {
             bindings = <
-&none  &kp B           &kp L           &kp D          &kp C         &kp V                                    &kp J            &kp Y             &kp O          &kp U           &kp COMMA       &none
+&none  &kp B           &kp L           &kp D          &kp C         &kp V                                    &kp J            &kp Y             &kp O          &kp U           &kp SQT         &none
 &none  &mt LEFT_GUI N  &mt LEFT_ALT R  &mt LCTRL T    &mt LSHIFT S  &kp G                                    &kp P            &mt LEFT_SHIFT H  &mt LCTRL A    &mt LEFT_ALT E  &mt LEFT_GUI I  &none
-&none  &lt 2 X         &kp Q           &kp M          &kp W         &kp Z                                    &kp K            &kp F             &kp SQT        &kp FSLH        &lt 2 DOT       &none
+&none  &lt 2 X         &kp Q           &kp M          &kp W         &kp Z                                    &kp K            &kp F             &kp COMMA      &kp DOT         &lt 2 SLASH     &none
                        &none           &td_lang_sync  &lt 7 ESC     &ht_space 3 0  &lt 4 TAB    &lt 9 ENTER  &lt 8 BACKSPACE  &none             &lt 11 DELETE  &none
             >;
 
@@ -189,16 +224,16 @@
 
         Button {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&none  &m_redo       &m_undo   &m_cut     &m_copy    &m_paste                        &m_paste  &m_copy    &m_cut     &m_undo   &m_redo   &none
+&none  &kp LEFT_GUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none                           &none     &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none
+&none  &m_redo       &m_undo   &m_cut     &m_copy    &m_paste                        &m_paste  &m_copy    &m_cut     &m_undo   &m_redo   &none
+                     &none     &none      &mkp MB3   &mkp MB1  &mkp MB2    &mkp MB2  &mkp MB1  &mkp MB3   &none      &none
             >;
         };
 
         nav {
             bindings = <
-&none  &td_bootloader  &td_reset     &none      &none           &none                      &none          &none       &none          &none        &none      &none
+&none  &td_bootloader  &td_reset     &none      &none           &none                      &m_paste       &m_copy     &m_cut         &m_undo      &m_redo    &none
 &none  &kp LEFT_GUI    &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &none                      &kp CAPS       &kp LEFT    &kp DOWN       &kp UP       &kp RIGHT  &none
 &none  &none           &none         &none      &none           &none                      &kp INSERT     &kp HOME    &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &none
                        &none         &none      &none           &none  &none    &kp ENTER  &kp BACKSPACE  &kp DELETE  &none          &none
@@ -209,10 +244,10 @@
 
         mouse {
             bindings = <
-&none  &td_bootloader  &td_reset  &none      &none      &none                        &none  &none  &none     &none     &none  &none
-&none  &kp LGUI        &kp LALT   &kp LCTRL  &kp LSHFT  &none                        &none  &mo 6  &mkp MB4  &mkp MB5  &mo 5  &none
-&none  &none           &none      &none      &none      &none                        &none  &none  &none     &none     &none  &none
-                       &none      &none      &mkp MB3   &mkp MB1  &mkp MB2    &none  &none  &none  &none     &none
+&none  &td_bootloader  &td_reset  &none      &none      &none                        &m_paste  &m_copy  &m_cut    &m_undo   &m_redo  &none
+&none  &kp LGUI        &kp LALT   &kp LCTRL  &kp LSHFT  &none                        &none     &mo 6    &mkp MB4  &mkp MB5  &mo 5    &none
+&none  &none           &none      &none      &none      &none                        &none     &none    &none     &none     &none    &none
+                       &none      &none      &mkp MB3   &mkp MB1  &mkp MB2    &none  &none     &none    &none     &none
             >;
 
             display-name = "Mouse";
@@ -231,10 +266,10 @@
 
         sniper {
             bindings = <
-&none  &td_bootloader  &td_reset  &none      &none      &none                        &none  &none   &none     &none     &none   &none
-&none  &kp LGUI        &kp LALT   &kp LCTRL  &kp LSHFT  &none                        &none  &tog 6  &mkp MB4  &mkp MB5  &tog 5  &none
-&none  &none           &none      &none      &none      &none                        &none  &none   &none     &none     &none   &none
-                       &none      &none      &mkp MB3   &mkp MB1  &mkp MB2    &none  &none  &none   &none     &none
+&none  &td_bootloader  &td_reset  &none      &none      &none                        &m_paste  &m_copy  &m_cut    &m_undo   &m_redo  &none
+&none  &kp LGUI        &kp LALT   &kp LCTRL  &kp LSHFT  &none                        &none     &tog 6   &mkp MB4  &mkp MB5  &tog 5   &none
+&none  &none           &none      &none      &none      &none                        &none     &none    &none     &none     &none    &none
+                       &none      &none      &mkp MB3   &mkp MB1  &mkp MB2    &none  &none     &none    &none     &none
             >;
 
             display-name = "Sniper";
@@ -242,7 +277,7 @@
 
         Media {
             bindings = <
-&none  &td_bootloader  &td_reset  &none      &none      &none                       &none              &none         &none         &none            &none         &none
+&none  &td_bootloader  &td_reset  &none      &none      &none                       &m_paste           &m_copy       &m_cut        &m_undo          &m_redo       &none
 &none  &kp LGUI        &kp LALT   &kp LCTRL  &kp LSHFT  &none                       &ext_power EP_TOG  &kp C_PREV    &kp C_VOL_DN  &kp C_VOLUME_UP  &kp C_NEXT    &none
 &none  &none           &none      &none      &none      &none                       &out OUT_TOG       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_CLR
                        &none      &none      &none      &none  &none    &kp K_STOP  &kp C_PP           &none         &kp C_MUTE    &none
