@@ -215,10 +215,10 @@
         ru {
             display-name = "Ru";
             bindings = <
-&kp RU_CYRILLIC_ZHE      &kp RU_CYRILLIC_TSE         &kp RU_CYRILLIC_SOFT_SIGN   &kp RU_CYRILLIC_YA        &kp RU_CYRILLIC_PE            &kp RU_CYRILLIC_GHE                             &kp RU_CYRILLIC_ZE  &kp RU_CYRILLIC_VE             &kp RU_CYRILLIC_KA        &kp RU_CYRILLIC_DE           &kp RU_CYRILLIC_CHE          &kp RU_CYRILLIC_SHA
-&kp RU_CYRILLIC_SHORT_I  &mt LEFT_GUI RU_CYRILLIC_U  &mt LEFT_ALT RU_CYRILLIC_I  &mt LCTRL RU_CYRILLIC_IE  &mt LEFT_SHIFT RU_CYRILLIC_O  &kp RU_CYRILLIC_A                               &kp RU_CYRILLIC_EL  &mt LEFT_SHIFT RU_CYRILLIC_EN  &mt LCTRL RU_CYRILLIC_TE  &mt LEFT_ALT RU_CYRILLIC_ES  &mt LEFT_GUI RU_CYRILLIC_ER  &kp RU_CYRILLIC_SHCHA
-&none                    &lt 2 RU_CYRILLIC_EF        &kp RU_CYRILLIC_E           &kp RU_CYRILLIC_HA        &kp RU_CYRILLIC_YERU          &kp RU_CYRILLIC_YU                              &kp RU_CYRILLIC_BE  &kp RU_CYRILLIC_EM             &kp RU_COMMA              &kp RU_DOT                   &lt 2 RU_FSLH                &none
-                                                     &none                       &none                     &lt 7 ESC                     &ht_space 3 0        &lt 4 TAB    &lt 10 ENTER  &lt 8 BACKSPACE     &none                          &lt 11 DELETE             &none
+&kp RU_CYRILLIC_ZHE        &kp RU_CYRILLIC_TSE         &kp RU_CYRILLIC_SOFT_SIGN   &kp RU_CYRILLIC_YA        &kp RU_CYRILLIC_PE            &kp RU_CYRILLIC_GHE                             &kp RU_CYRILLIC_ZE  &kp RU_CYRILLIC_VE             &kp RU_CYRILLIC_KA        &kp RU_CYRILLIC_DE           &kp RU_CYRILLIC_CHE          &kp RU_CYRILLIC_SHA
+&kp RU_CYRILLIC_SHORT_I    &mt LEFT_GUI RU_CYRILLIC_U  &mt LEFT_ALT RU_CYRILLIC_I  &mt LCTRL RU_CYRILLIC_IE  &mt LEFT_SHIFT RU_CYRILLIC_O  &kp RU_CYRILLIC_A                               &kp RU_CYRILLIC_EL  &mt LEFT_SHIFT RU_CYRILLIC_EN  &mt LCTRL RU_CYRILLIC_TE  &mt LEFT_ALT RU_CYRILLIC_ES  &mt LEFT_GUI RU_CYRILLIC_ER  &kp RU_CYRILLIC_SHCHA
+&kp RU_CYRILLIC_HARD_SIGN  &lt 2 RU_CYRILLIC_EF        &kp RU_CYRILLIC_E           &kp RU_CYRILLIC_HA        &kp RU_CYRILLIC_YERU          &kp RU_CYRILLIC_YU                              &kp RU_CYRILLIC_BE  &kp RU_CYRILLIC_EM             &kp RU_COMMA              &kp RU_DOT                   &lt 2 RU_FSLH                &none
+                                                       &none                       &none                     &lt 7 ESC                     &ht_space 3 0        &lt 4 TAB    &lt 10 ENTER  &lt 8 BACKSPACE     &none                          &lt 11 DELETE             &none
             >;
         };
 
